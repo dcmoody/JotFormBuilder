@@ -52,10 +52,10 @@ function handleResult(json){ //function that builds the forms identified by the 
 				var type=value2["type"];
 				var name=value2["text"];
 				htmlstring+=name;
-				htmlstring+="<select>";
+				htmlstring+="<select name='"+qid+"'"+ "id='"+name+"'>";
 				var l=listing.split("|"); //splits the options into an array 
 				$.each (l, function(k, item){	//applies each value in the l-array to the item variable and loads each in turn into the htmlstring variable
-					htmlstring+= "<option name='"+qid+"'"+ "id='"+name+"' value='"+item+"'>"+item+"</option><br>";	
+					htmlstring+= "<option value='"+item+"'>"+item+"</option><br>";	
 				}
 			);
 				htmlstring+="</select><br>";
